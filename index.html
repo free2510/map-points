@@ -30,7 +30,19 @@
             }
 
             var bounds = new mapboxgl.LngLatBounds();
-            var style = mapType === 'streets' ? 'mapbox://styles/mapbox/streets-v11' : 'mapbox://styles/mapbox/satellite-v9';
+            var style;
+
+            // Map the provided mapType to the correct Mapbox style URL
+            switch (mapType) {
+                case 'streets':
+                    style = 'mapbox://styles/mapbox/streets-v11';
+                    break;
+                case 'satellite':
+                default:
+                    style = 'mapbox://styles/mapbox/satellite-v9';
+                    break;
+            }
+
             var map = new mapboxgl.Map({
                 container: 'map',
                 style: style,
