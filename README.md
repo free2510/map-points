@@ -41,6 +41,8 @@ https://free2510.github.io/map-6/index.html?firebaseurl=https://smart-vilage-def
 - For streets view:
 https://free2510.github.io/map-6/index.html?firebaseurl=https://smart-vilage-default-rtdb.firebaseio.com/locations.json?auth=AIzaSyCSMlIol-7KSVR22X7WS6uceayDyNZM3bM&mapType=streets
 
+https://free2510.github.io/map-points/index.html?firebaseurl=https://services-5c347-default-rtdb.firebaseio.com/town/locations.json&auth=AIzaSyB8AcORv3BtDHCbrsnBM12cSrWzp7bzp6A&category=pharmacy&mapType=streets
+
 
 ## About
 This project utilizes Mapbox for map visualization and fetches location data from a Firebase database. It provides a dynamic mapping solution that can be customized to display different categories of locations based on the provided parameters in the URL.
