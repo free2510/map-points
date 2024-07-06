@@ -102,13 +102,15 @@
                 .catch(error => console.error('Error fetching data:', error));
         }
 
+        // Get URL parameters
         const urlParams = new URLSearchParams(window.location.search);
         const firebaseurl = urlParams.get('firebaseurl');
         const category = urlParams.get('category');
         const mapType = urlParams.get('mapType') || 'satellite'; // Default to satellite
 
         if (firebaseurl) {
-            fetchData(firebaseurl, category, mapType);
+            // Decode the firebaseurl parameter value
+            fetchData(decodeURIComponent(firebaseurl), category, mapType);
         } else {
             console.error('Firebase URL is required as a parameter.');
         }
